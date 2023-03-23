@@ -1,0 +1,29 @@
+.phone-warning {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f00;
+}
+
+.phone-warning--is-expanded {
+  display: block;
+}
+
+.phone-warning__message {
+  margin: 0 auto;
+  text-align: center;
+  padding: 5vh 5vw;
+  font-size: 8vh;
+}
+
+.phone-warning__countdown {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5vh;
+  text-align: center;
+  font-size: 12vh;
+}

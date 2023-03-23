@@ -1,0 +1,20 @@
+.prohibited {
+  display: flex;
+  width: 99vw;
+  list-style: none;
+}
+
+.prohibited__item {
+  flex: 0 0 33.33%;
+  text-align: center;
+}
+
+.prohibited__name {
+  display: block;
+  font-size: 3.5vh;
+}
+
+.prohibited__time {
+  display: block;
+  font-size: 5vh;
+}

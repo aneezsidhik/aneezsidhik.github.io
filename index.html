@@ -1,1 +1,123 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Timer</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/components/index.css"/>
+</head>
+
+<body>
+<div class="page">
+    <header>
+        <p class="title">WEMBLEY CENTRAL MASJID</p>
+
+        <div class="date-time">
+        <span class="date-time__time digital">
+          <span class="date-time__hours-minutes"></span>
+          <span class="date-time__seconds"></span>
+        </span>
+            <div class="date-time__date">
+                <p class="date-time__gregorian-date"></p>
+                <p class="message remaining_time">
+                    <span class="next__prayer__name">&nbsp;</span>
+                    <span class="next__prayer__time digital">&nbsp;</span>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="phone-warning">
+            <p class="phone-warning__message">Please switch off your mobile phone</p>
+            <p class="phone-warning__countdown digital"></p>
+            <audio class="reminder">
+                <source src="assets/audio/alarm_clock.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <table class="schedule">
+            <tr>
+                <th class="schedule__heading">START</th>
+                <th class="schedule__heading">&nbsp;</th>
+                <th class="schedule__heading">JAMA'AT</th>
+            </tr>
+            <tr class="schedule__row">
+                <td class="schedule__time schedule__time--left digital"></td>
+                <td class="schedule__time-name">FAJR</td>
+                <td class="schedule__time schedule__time--right digital"></td>
+            </tr>
+            <tr class="schedule__row">
+                <td class="schedule__time schedule__time--left digital"></td>
+                <td class="schedule__time-name">DHUHR</td>
+                <td class="schedule__time schedule__time--right digital"></td>
+            </tr>
+            <tr class="schedule__row">
+                <td class="schedule__time schedule__time--left digital"></td>
+                <td class="schedule__time-name">ASR</td>
+                <td class="schedule__time schedule__time--right digital"></td>
+            </tr>
+            <tr class="schedule__row">
+                <td class="schedule__time schedule__time--left digital"></td>
+                <td class="schedule__time-name">MAGHRIB</td>
+                <td class="schedule__time schedule__time--right digital"></td>
+            </tr>
+            <tr class="schedule__row">
+                <td class="schedule__time schedule__time--left digital"></td>
+                <td class="schedule__time-name">ISHA</td>
+                <td class="schedule__time schedule__time--right digital"></td>
+            </tr>
+        </table>
+    </main>
+
+    <footer class="footer">
+        <ul class="prohibited">
+            <li class="prohibited__item">
+                <span class="prohibited__name">SUNRISE</span>
+                <span class="prohibited__time prohibited__sunrise digital"></span>
+            </li>
+            <li class="prohibited__item">
+                <span class="prohibited__name">ISHRAQ</span>
+                <span class="prohibited__time prohibited__ishraq digital"></span>
+            </li>
+            <li class="prohibited__item">
+                <span class="prohibited__name">SUNSET</span>
+                <span class="prohibited__time prohibited__sunset digital"></span>
+            </li>
+        </ul>
+        <p class="message marquee">
+            <span class="scrolling_text"></span>
+        </p>
+    </footer>
+</div>
+<div class="flyer">
+    <table class="content">
+        <tr>
+            <td class="sayingInArabic"></td>
+        </tr>
+        <tr>
+            <td class="sayingInEnglish"></td>
+        </tr>
+        <tr>
+            <td class="reference"></td>
+        </tr>
+    </table>
+</div>
+
+<script type="text/javascript" src="assets/js/mock-date.js"></script>
+<script type="text/javascript" src="assets/js/init.js"></script>
+<script type="text/javascript" src="data/data.js"></script>
+<script type="text/javascript" src="data/content.js"></script>
+<script type="text/javascript" src="assets/js/utilities.js"></script>
+<script type="text/javascript" src="assets/js/tick.js"></script>
+<script type="text/javascript" src="assets/js/components/date-time.js"></script>
+<script type="text/javascript" src="assets/js/components/message.js"></script>
+<script type="text/javascript" src="assets/js/components/phone-warning.js"></script>
+<script type="text/javascript" src="assets/js/components/prohibited.js"></script>
+<script type="text/javascript" src="assets/js/components/schedule.js"></script>
+<script type="text/javascript" src="assets/js/components/page.js"></script>
+<script type="text/javascript" src="assets/js/components/alarm.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

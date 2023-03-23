@@ -1,0 +1,42 @@
+.date-time {
+  height: 14vh;
+}
+
+.date-time__time {
+  display: block;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  text-align: center;
+}
+
+.date-time__hours-minutes {
+  font-size: 9vh;
+}
+
+.date-time__seconds {
+  font-size: 4vh;
+}
+
+.date-time__date {
+  border-bottom: 1px solid #fff;
+  line-height: 4.5vh;
+}
+
+.date-time__gregorian-date,
+.date-time__hijri-date {
+  text-align: center;
+  font-size: 3.5vh;
+  color: #0f0;
+  display: none;
+}
+
+.remaining_time {
+ display: none;
+ text-align: center;
+ font-size: 3.5vh;
+}
+
+.show {
+ display: block;
+}
+

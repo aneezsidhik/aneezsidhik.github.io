@@ -1,0 +1,18 @@
+{
+  "settingsReloadIntervalMinutes": 1,
+  "fullscreen": true,
+  "autoStart": true,
+  "lazyLoadTabs": false,
+  "websites": [
+    {
+      "url": "http://timer-master.droppages.com",
+      "duration": 30,
+      "tabReloadIntervalSeconds": -1
+    },
+    {
+      "url": "http://timer-master.droppages.com/assets/images/hajj.jpeg",
+      "duration": 10,
+      "tabReloadIntervalSeconds": 10
+    }
+  ]
+}

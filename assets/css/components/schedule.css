@@ -1,0 +1,39 @@
+.schedule {
+  width: 100%;
+  height: 65vh;
+  border-bottom: 1px solid #fff;
+}
+
+.schedule__heading {
+  font-size: 3vh;
+  font-weight: normal;
+}
+
+.schedule__time,
+.schedule__time-name {
+  width: 33.333%;
+  font-size: 4vh;
+  text-align: center;
+}
+
+.schedule__time--left {
+  color: #f00;
+  /* for new font */
+  font-size: 8vh;
+}
+
+.schedule__time--right {
+  color: #0f0;
+  /* for new font */
+  font-size: 8vh;
+
+}
+
+.schedule__row--highlighted .schedule__time-name,
+.schedule__row--highlighted .schedule__time--right {
+  color: #ff0 !important;
+}
+
+.hide_row {
+  display: none;
+}
