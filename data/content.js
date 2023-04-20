@@ -7,20 +7,24 @@ App.content = [
         "image": "juma_0130.jpg",
         "fromDate": "2023-03-24 12:01:00"
     },
-    {
+/*    {
         "image": "ramadan_tafseer.jpg",
         "toDate": "2023-04-18 00:00:00"
     },
     {
         "image": "ramadan_reminder_urdu.jpg",
         "toDate": "2023-04-20 00:00:00"
-    }
-/*    {
+    }*/
+    {
         "image": "english_tafseer.jpg",
     },
     {
         "image": "urdu_seerah.jpg",
-    }*/
+    },
+    {
+        "image": "eid_1_2023.jpg",
+        "toDate": "2023-04-22 10:00:00"
+    }
 /*    {
         "image": "page_2.jpg",
         "fromDate": "2022-03-19 01:36:00",
