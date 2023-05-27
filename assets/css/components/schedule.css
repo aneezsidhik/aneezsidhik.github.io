@@ -7,13 +7,19 @@
 .schedule__heading {
   font-size: 3vh;
   font-weight: normal;
+  text-align: right;
 }
 
 .schedule__time,
 .schedule__time-name {
   width: 33.333%;
   font-size: 4vh;
-  text-align: center;
+  text-align: right;
+}
+
+.left {
+text-align: left;
+padding: 0vh 1vw;
 }
 
 .schedule__time--left {
