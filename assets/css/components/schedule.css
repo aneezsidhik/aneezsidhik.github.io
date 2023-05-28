@@ -8,18 +8,19 @@
   font-size: 3vh;
   font-weight: normal;
   text-align: right;
+  padding: 0vh 1vw;
 }
 
 .schedule__time,
 .schedule__time-name {
   width: 33.333%;
-  font-size: 4vh;
+  font-size: 3vh;
   text-align: right;
+  padding: 0vh 1vw;
 }
 
 .left {
-text-align: left;
-padding: 0vh 1vw;
+  text-align: left;
 }
 
 .schedule__time--left {
