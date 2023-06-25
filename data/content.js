@@ -22,8 +22,8 @@ App.content = [
         "image": "urdu_seerah.jpg",
     },
     {
-        "image": "eid_1_2023.jpg",
-        "toDate": "2023-04-22 10:00:00"
+        "image": "eid_2_2023.jpg",
+        "toDate": "2023-06-28 10:00:00"
     }
 /*    {
         "image": "page_2.jpg",
