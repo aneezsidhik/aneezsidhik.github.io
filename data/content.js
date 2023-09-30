@@ -1,11 +1,11 @@
 App.content = [
     {
-        "image": "juma_0100.jpg",
-        "toDate": "2023-03-24 12:00:00"
+        "image": "juma_0130.jpg",
+        "toDate": "2023-10-27 14:00:00"
     },
     {
-        "image": "juma_0130.jpg",
-        "fromDate": "2023-03-24 12:01:00"
+        "image": "juma_0100.jpg",
+        "fromDate": "2023-10-27 14:01:00"
     },
 /*    {
         "image": "ramadan_tafseer.jpg",
@@ -16,10 +16,10 @@ App.content = [
         "toDate": "2023-04-20 00:00:00"
     }*/
     {
-        "image": "english_tafseer.jpg",
+        "image": "english_tafseer_isha.jpg",
     },
     {
-        "image": "urdu_seerah.jpg",
+        "image": "urdu_seerah_isha.jpg",
     }
 /*    {
         "image": "page_2.jpg",
