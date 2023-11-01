@@ -20,6 +20,9 @@ App.content = [
     },
     {
         "image": "urdu_seerah_isha.jpg",
+    },
+    {
+        "image": "isha_weekend.jpg",
     }
 /*    {
         "image": "page_2.jpg",
