@@ -28,9 +28,15 @@ class ScheduleComponent {
       if(todaysJamaatTime < NOW.getTime()) {
           row.querySelector('.schedule__time--left').textContent = utils.convertToTwelveHourTime(tomorrowsData.schedule[index][0]);
           row.querySelector('.schedule__time--right').textContent = utils.convertToTwelveHourTime(tomorrowsData.schedule[index][1]);
+          if(NOW.getDay() == 4 && row.querySelector('.schedule__time-name').textContent == "DHUHR") {
+            row.querySelector('.schedule__time-name').textContent = "JUMA";
+          }
       } else {
           row.querySelector('.schedule__time--left').textContent = utils.convertToTwelveHourTime(todaysData.schedule[index][0]);
           row.querySelector('.schedule__time--right').textContent = utils.convertToTwelveHourTime(todaysData.schedule[index][1]);
+          if(NOW.getDay() == 5 && row.querySelector('.schedule__time-name').textContent == "DHUHR") {
+            row.querySelector('.schedule__time-name').textContent = "JUMA";
+          }
       }
       if (App.masjidClosed) {
         row.querySelector('.schedule__time--right').textContent = "-";
