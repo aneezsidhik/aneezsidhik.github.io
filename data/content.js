@@ -23,7 +23,8 @@ App.content = [
     },
     {
         "image": "isha_weekend.jpg",
-        "fromDate": "2023-11-05 18:30"
+        "fromDate": "2023-11-05 18:30",
+        "toDate": "2024-01-08 00:00:00"
     }
 /*    {
         "image": "page_2.jpg",
