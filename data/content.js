@@ -22,9 +22,8 @@ App.content = [
         "image": "urdu_seerah_isha.jpg",
     },
     {
-        "image": "isha_weekend.jpg",
-        "fromDate": "2023-11-05 18:30",
-        "toDate": "2024-01-08 00:00:00"
+        "image": "isha_weekend_615.jpg",
+        "fromDate": "2023-11-05 18:30"
     }
 /*    {
         "image": "page_2.jpg",
