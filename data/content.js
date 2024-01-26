@@ -22,7 +22,7 @@ App.content = [
         "image": "urdu_seerah_isha.jpg",
     },
     {
-        "image": "isha_weekend_615.jpg",
+        "image": "isha_weekend_630.jpg",
         "fromDate": "2023-11-05 18:30"
     }
 /*    {
