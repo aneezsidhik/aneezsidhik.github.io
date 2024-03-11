@@ -1,11 +1,11 @@
 App.content = [
     {
         "image": "juma_0130.jpg",
-        "toDate": "2024-10-27 14:00:00"
+        "toDate": "2023-10-27 14:00:00"
     },
     {
         "image": "juma_0100.jpg",
-        "toDate": "2023-10-27 14:01:00"
+        "toDate": "2024-10-27 14:01:00"
     },
 /*    {
         "image": "ramadan_tafseer.jpg",
