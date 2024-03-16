@@ -7,24 +7,15 @@ App.content = [
         "image": "juma_0100.jpg",
         "toDate": "2024-10-27 14:01:00"
     },
-/*    {
-        "image": "ramadan_tafseer.jpg",
-        "toDate": "2023-04-18 00:00:00"
-    },
     {
-        "image": "ramadan_reminder_urdu.jpg",
-        "toDate": "2023-04-20 00:00:00"
-    }*/
+        "image": "iftar.jpg",
+        "toDate": "2024-04-08 23:59:00"
+    },
     {
         "image": "english_tafseer_asr.jpg",
     },
     {
         "image": "urdu_seerah_asr.jpg",
-    },
-    {
-        "image": "isha_weekend_630.jpg",
-        "fromDate": "2023-11-05 18:30",
-        "toDate": "2024-01-28 18:30"
     }
 /*    {
         "image": "page_2.jpg",
