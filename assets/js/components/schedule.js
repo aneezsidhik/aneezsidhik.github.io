@@ -91,9 +91,6 @@ class ScheduleComponent {
       const TIME = utils.convertStringTimeToDateObject(this.azanTimes[index]);
       const DIFF = TIME.getTime() - NOW.getTime();
       this.determineNextPrayerTime(DIFF,`${this.prayerNames[index]} IN:`);
-      if(index == 0 || index == 3) {
-        this.handlePhoneWarningAndAlarmEvents(DIFF);
-      }
       if (DIFF > 0  && DIFF <= 1000) {
         window.dispatchEvent(new Event('alarm-on'));
         break;
