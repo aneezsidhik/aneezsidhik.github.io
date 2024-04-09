@@ -1,5 +1,9 @@
 App.content = [
     {
+        "image": "eid.jpeg",
+        "toDate": "2024-04-10 23:59:00"
+    },
+    {
         "image": "eid_salah.jpeg",
         "toDate": "2024-04-10 10:00:00"
     },
