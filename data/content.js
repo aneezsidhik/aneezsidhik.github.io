@@ -9,8 +9,8 @@ App.content = [
         "image": "urdu_seerah.jpg"
     },
     {
-        "image": "family_fun.jpg",
-        "toDate": "2024-06-09 19:30:00"
+        "image": "eid_salah_2024.jpg",
+        "toDate": "2024-06-16 10:00:00"
     },
     {
         "image": "free_health_checkup.jpg"
