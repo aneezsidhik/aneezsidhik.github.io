@@ -3,6 +3,10 @@ App.content = [
         "image": "juma_0130.jpg"
     },
     {
+        "image": "nhs_bhm.jpg",
+        "toDate": "2024-08-24 16:59:00"
+    },
+    {
         "image": "english_tafseer.jpg"
     },
     {
