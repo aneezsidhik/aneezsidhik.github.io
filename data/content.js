@@ -3,18 +3,10 @@ App.content = [
         "image": "juma_0130.jpg"
     },
     {
-        "image": "nhs_bhm.jpg",
-        "toDate": "2024-08-24 16:59:00"
+        "image": "tafseer_isha.jpg"
     },
     {
-        "image": "english_tafseer.jpg"
-    },
-    {
-        "image": "urdu_seerah.jpg"
-    },
-    {
-        "image": "eid_salah_2024.jpg",
-        "toDate": "2024-06-16 10:00:00"
+        "image": "seerah_isha.jpg"
     },
     {
         "image": "free_health_checkup.jpg"
