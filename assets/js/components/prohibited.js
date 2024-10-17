@@ -11,6 +11,8 @@ class ProhibitedComponent {
     this.containerElement.querySelector('.prohibited__sunrise').textContent = `${utils.pad(sunrise.getHours())}:${utils.pad(sunrise.getMinutes())}`;
     sunrise.setMinutes(sunrise.getMinutes()+15);
     this.containerElement.querySelector('.prohibited__ishraq').textContent =`${utils.pad(sunrise.getHours())}:${utils.pad(sunrise.getMinutes())}`;
-    this.containerElement.querySelector('.prohibited__sunset').textContent = utils.convertToTwelveHourTime(App.todaysData.schedule[3][0]);
+    const zawal = utils.convertStringTimeToDateObject(App.todaysData.schedule[1][0]);
+    zawal.setMinutes(zawal.getMinutes()-10);
+    this.containerElement.querySelector('.prohibited__zawal').textContent = `${utils.pad(zawal.getHours())}:${utils.pad(zawal.getMinutes())}`;
   }
 }
