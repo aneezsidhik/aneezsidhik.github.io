@@ -13,6 +13,6 @@ class ProhibitedComponent {
     this.containerElement.querySelector('.prohibited__ishraq').textContent =`${utils.pad(sunrise.getHours())}:${utils.pad(sunrise.getMinutes())}`;
     const zawal = utils.convertStringTimeToDateObject(App.todaysData.schedule[1][0]);
     zawal.setMinutes(zawal.getMinutes()-10);
-    this.containerElement.querySelector('.prohibited__zawal').textContent = `${utils.pad(zawal.getHours())}:${utils.pad(zawal.getMinutes())}`;
+    this.containerElement.querySelector('.prohibited__zawaal').textContent = `${utils.pad(zawal.getHours())}:${utils.pad(zawal.getMinutes())}`;
   }
 }
