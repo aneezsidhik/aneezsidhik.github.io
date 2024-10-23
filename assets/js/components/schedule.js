@@ -52,6 +52,10 @@ class ScheduleComponent {
     this.azanTimes.push(document.querySelector('.prohibited__ishraq').textContent);
     this.prayerTimes.push('');
     this.prayerNames.push('ISHRAQ');
+
+    this.azanTimes.push(document.querySelector('.prohibited__zawaal').textContent);
+    this.prayerTimes.push('');
+    this.prayerNames.push('ZAWAAL');
   }
 
   updateCurrentAzanAndPrayerTime() {
