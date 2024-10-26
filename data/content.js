@@ -1,6 +1,6 @@
 App.content = [
     {
-        "image": "juma_0130.jpg"
+        "image": "juma_0100.jpg"
     },
     {
         "image": "tafseer_isha.jpg"
