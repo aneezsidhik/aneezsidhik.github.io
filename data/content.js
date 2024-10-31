@@ -9,7 +9,7 @@ App.content = [
         "image": "seerah_isha.jpg"
     },
     {
-        "image": "free_health_checkup.jpg"
+        "image": "isha_weekend.jpg"
     },
 /*    {
         "image": "page_2.jpg",
