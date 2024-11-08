@@ -1072,210 +1072,210 @@ App.data =
     "message" : ""
   },
   "01-11" : {
-    "hijriDate" : "28 Rabi Ul Akhir 1446",
+    "hijriDate" : "29 Rabi Ul Akhir 1446",
     "schedule" : [ [ "5:18", "5:45" ], [ "11:50", "13:00" ], [ "14:46", "15:15" ], [ "16:38", "16:38" ], [ "18:04", "19:30" ] ],
     "sunrise" : "6:55",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "02-11" : {
-    "hijriDate" : "29 Rabi Ul Akhir 1446",
+    "hijriDate" : "30 Rabi Ul Akhir 1446",
     "schedule" : [ [ "5:19", "5:45" ], [ "11:50", "13:00" ], [ "14:45", "15:15" ], [ "16:36", "16:36" ], [ "18:03", "18:30" ] ],
     "sunrise" : "6:56",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "03-11" : {
-    "hijriDate" : "30 Rabi Ul Akhir 1446",
+    "hijriDate" : "01 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:21", "5:45" ], [ "11:50", "13:00" ], [ "14:43", "15:15" ], [ "16:34", "16:34" ], [ "18:01", "18:30" ] ],
     "sunrise" : "6:58",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "04-11" : {
-    "hijriDate" : "01 Jamadi Al Awwal 1446",
+    "hijriDate" : "02 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:23", "5:45" ], [ "11:50", "13:00" ], [ "14:41", "15:15" ], [ "16:32", "16:32" ], [ "18:00", "19:30" ] ],
     "sunrise" : "7:00",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "05-11" : {
-    "hijriDate" : "02 Jamadi Al Awwal 1446",
+    "hijriDate" : "03 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:24", "5:45" ], [ "11:50", "13:00" ], [ "14:40", "15:15" ], [ "16:31", "16:31" ], [ "17:58", "19:30" ] ],
     "sunrise" : "7:02",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "06-11" : {
-    "hijriDate" : "03 Jamadi Al Awwal 1446",
+    "hijriDate" : "04 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:26", "5:45" ], [ "11:50", "13:00" ], [ "14:38", "15:15" ], [ "16:29", "16:29" ], [ "17:57", "19:30" ] ],
     "sunrise" : "7:03",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "07-11" : {
-    "hijriDate" : "04 Jamadi Al Awwal 1446",
+    "hijriDate" : "05 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:28", "5:45" ], [ "11:50", "13:00" ], [ "14:37", "15:15" ], [ "16:27", "16:27" ], [ "17:55", "19:30" ] ],
     "sunrise" : "7:05",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "08-11" : {
-    "hijriDate" : "05 Jamadi Al Awwal 1446",
+    "hijriDate" : "06 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:29", "6:00" ], [ "11:50", "13:00" ], [ "14:35", "15:00" ], [ "16:26", "16:26" ], [ "17:54", "19:30" ] ],
     "sunrise" : "7:07",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "09-11" : {
-    "hijriDate" : "06 Jamadi Al Awwal 1446",
+    "hijriDate" : "07 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:31", "6:00" ], [ "11:50", "13:00" ], [ "14:33", "15:00" ], [ "16:24", "16:24" ], [ "17:53", "18:30" ] ],
     "sunrise" : "7:09",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "10-11" : {
-    "hijriDate" : "07 Jamadi Al Awwal 1446",
+    "hijriDate" : "08 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:33", "6:00" ], [ "11:50", "13:00" ], [ "14:32", "15:00" ], [ "16:22", "16:22" ], [ "17:51", "18:30" ] ],
     "sunrise" : "7:10",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "11-11" : {
-    "hijriDate" : "08 Jamadi Al Awwal 1446",
+    "hijriDate" : "09 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:34", "6:00" ], [ "11:50", "13:00" ], [ "14:31", "15:00" ], [ "16:21", "16:21" ], [ "17:50", "19:30" ] ],
     "sunrise" : "7:12",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "12-11" : {
-    "hijriDate" : "09 Jamadi Al Awwal 1446",
+    "hijriDate" : "10 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:36", "6:00" ], [ "11:50", "13:00" ], [ "14:29", "15:00" ], [ "16:19", "16:19" ], [ "17:49", "19:30" ] ],
     "sunrise" : "7:14",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "13-11" : {
-    "hijriDate" : "10 Jamadi Al Awwal 1446",
+    "hijriDate" : "11 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:37", "6:00" ], [ "11:51", "13:00" ], [ "14:28", "15:00" ], [ "16:18", "16:18" ], [ "17:48", "19:30" ] ],
     "sunrise" : "7:16",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "14-11" : {
-    "hijriDate" : "11 Jamadi Al Awwal 1446",
+    "hijriDate" : "12 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:39", "6:00" ], [ "11:51", "13:00" ], [ "14:26", "15:00" ], [ "16:17", "16:17" ], [ "17:46", "19:30" ] ],
     "sunrise" : "7:17",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "15-11" : {
-    "hijriDate" : "12 Jamadi Al Awwal 1446",
+    "hijriDate" : "13 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:41", "6:15" ], [ "11:51", "13:00" ], [ "14:25", "14:45" ], [ "16:15", "16:15" ], [ "17:45", "19:30" ] ],
     "sunrise" : "7:19",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "16-11" : {
-    "hijriDate" : "13 Jamadi Al Awwal 1446",
+    "hijriDate" : "14 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:42", "6:15" ], [ "11:51", "13:00" ], [ "14:24", "14:45" ], [ "16:14", "16:14" ], [ "17:44", "18:30" ] ],
     "sunrise" : "7:21",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "17-11" : {
-    "hijriDate" : "14 Jamadi Al Awwal 1446",
+    "hijriDate" : "15 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:44", "6:15" ], [ "11:51", "13:00" ], [ "14:23", "14:45" ], [ "16:13", "16:13" ], [ "17:43", "18:30" ] ],
     "sunrise" : "7:22",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "18-11" : {
-    "hijriDate" : "15 Jamadi Al Awwal 1446",
+    "hijriDate" : "16 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:46", "6:15" ], [ "11:51", "13:00" ], [ "14:21", "14:45" ], [ "16:11", "16:11" ], [ "17:42", "19:30" ] ],
     "sunrise" : "7:24",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "19-11" : {
-    "hijriDate" : "16 Jamadi Al Awwal 1446",
+    "hijriDate" : "17 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:47", "6:15" ], [ "11:52", "13:00" ], [ "14:20", "14:45" ], [ "16:10", "16:10" ], [ "17:41", "19:30" ] ],
     "sunrise" : "7:26",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "20-11" : {
-    "hijriDate" : "17 Jamadi Al Awwal 1446",
+    "hijriDate" : "18 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:49", "6:15" ], [ "11:52", "13:00" ], [ "14:19", "14:45" ], [ "16:09", "16:09" ], [ "17:40", "19:30" ] ],
     "sunrise" : "7:27",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "21-11" : {
-    "hijriDate" : "18 Jamadi Al Awwal 1446",
+    "hijriDate" : "19 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:50", "6:15" ], [ "11:52", "13:00" ], [ "14:18", "14:45" ], [ "16:08", "16:08" ], [ "17:39", "19:30" ] ],
     "sunrise" : "7:29",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "22-11" : {
-    "hijriDate" : "19 Jamadi Al Awwal 1446",
+    "hijriDate" : "20 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:52", "6:30" ], [ "11:52", "13:00" ], [ "14:17", "14:30" ], [ "16:07", "16:07" ], [ "17:38", "19:30" ] ],
     "sunrise" : "7:31",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "23-11" : {
-    "hijriDate" : "20 Jamadi Al Awwal 1446",
+    "hijriDate" : "21 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:53", "6:30" ], [ "11:53", "13:00" ], [ "14:16", "14:30" ], [ "16:06", "16:06" ], [ "17:38", "18:30" ] ],
     "sunrise" : "7:32",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "24-11" : {
-    "hijriDate" : "21 Jamadi Al Awwal 1446",
+    "hijriDate" : "22 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:55", "6:30" ], [ "11:53", "13:00" ], [ "14:15", "14:30" ], [ "16:05", "16:05" ], [ "17:37", "18:30" ] ],
     "sunrise" : "7:34",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "25-11" : {
-    "hijriDate" : "22 Jamadi Al Awwal 1446",
+    "hijriDate" : "23 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:56", "6:30" ], [ "11:53", "13:00" ], [ "14:14", "14:30" ], [ "16:04", "16:04" ], [ "17:36", "19:30" ] ],
     "sunrise" : "7:36",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "26-11" : {
-    "hijriDate" : "23 Jamadi Al Awwal 1446",
+    "hijriDate" : "24 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:58", "6:30" ], [ "11:53", "13:00" ], [ "14:13", "14:30" ], [ "16:03", "16:03" ], [ "17:35", "19:30" ] ],
     "sunrise" : "7:37",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "27-11" : {
-    "hijriDate" : "24 Jamadi Al Awwal 1446",
+    "hijriDate" : "25 Jamadi Al Awwal 1446",
     "schedule" : [ [ "5:59", "6:30" ], [ "11:54", "13:00" ], [ "14:12", "14:30" ], [ "16:02", "16:02" ], [ "17:35", "19:30" ] ],
     "sunrise" : "7:39",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "28-11" : {
-    "hijriDate" : "25 Jamadi Al Awwal 1446",
+    "hijriDate" : "26 Jamadi Al Awwal 1446",
     "schedule" : [ [ "6:01", "6:30" ], [ "11:54", "13:00" ], [ "14:11", "14:30" ], [ "16:01", "16:01" ], [ "17:34", "19:30" ] ],
     "sunrise" : "7:40",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "29-11" : {
-    "hijriDate" : "26 Jamadi Al Awwal 1446",
+    "hijriDate" : "27 Jamadi Al Awwal 1446",
     "schedule" : [ [ "6:02", "6:30" ], [ "11:54", "13:00" ], [ "14:11", "14:30" ], [ "16:00", "16:00" ], [ "17:34", "19:30" ] ],
     "sunrise" : "7:42",
     "juma" : "1:00 & 1:30",
     "message" : ""
   },
   "30-11" : {
-    "hijriDate" : "27 Jamadi Al Awwal 1446",
+    "hijriDate" : "28 Jamadi Al Awwal 1446",
     "schedule" : [ [ "6:03", "6:30" ], [ "11:55", "13:00" ], [ "14:10", "14:30" ], [ "16:00", "16:00" ], [ "17:33", "18:30" ] ],
     "sunrise" : "7:43",
     "juma" : "1:00 & 1:30",
