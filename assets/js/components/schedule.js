@@ -28,15 +28,26 @@ class ScheduleComponent {
       if(todaysJamaatTime < NOW.getTime()) {
           row.querySelector('.schedule__time--left').textContent = utils.convertToTwelveHourTime(tomorrowsData.schedule[index][0]);
           row.querySelector('.schedule__time--right').textContent = utils.convertToTwelveHourTime(tomorrowsData.schedule[index][1]);
-          if(NOW.getDay() == 4 && row.querySelector('.schedule__time-name').textContent == "DHUHR") {
-            row.querySelector('.schedule__time-name').textContent = "JUMA";
-          }
       } else {
           row.querySelector('.schedule__time--left').textContent = utils.convertToTwelveHourTime(todaysData.schedule[index][0]);
           row.querySelector('.schedule__time--right').textContent = utils.convertToTwelveHourTime(todaysData.schedule[index][1]);
-          if(NOW.getDay() == 5 && row.querySelector('.schedule__time-name').textContent == "DHUHR") {
-            row.querySelector('.schedule__time-name').textContent = "JUMA";
-          }
+      }
+      const firstJuma = utils.convertStringTimeToDateObject(todaysData.juma[0]).getTime();
+      const secondJuma = utils.convertStringTimeToDateObject(todaysData.juma[1]).getTime();
+      if(todaysJamaatTime < NOW.getTime() && NOW.getDay() == 4 && index == 1) {
+        row.querySelector('.schedule__time-name').textContent = "JUMMAH";
+        row.querySelector('.schedule__time--right').textContent = utils.convertToTwelveHourTime(tomorrowsData.juma[0]);
+      } else if(NOW.getTime() <= secondJuma && NOW.getDay() == 5 && index == 1) {
+        row.querySelector('.schedule__time-name').textContent = "JUMMAH";
+        let jamaatTime = utils.convertToTwelveHourTime(todaysData.juma[0]);
+        todaysData.schedule[index][1] = todaysData.juma[0];
+        if(NOW.getTime() > firstJuma) {
+            jamaatTime = utils.convertToTwelveHourTime(todaysData.juma[1]);
+            todaysData.schedule[index][1] = todaysData.juma[1];
+        }
+        row.querySelector('.schedule__time--right').textContent = jamaatTime;
+      } else if(index == 1) {
+        row.querySelector('.schedule__time-name').textContent = "DHUHR";
       }
       if (App.masjidClosed) {
         row.querySelector('.schedule__time--right').textContent = "-";
