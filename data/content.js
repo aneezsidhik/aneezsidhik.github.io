@@ -1,5 +1,8 @@
 App.content = [
     {
+        "image": "juma_winter.jpg"
+    },
+    {
         "image": "tafseer_isha.jpg"
     },
     {
