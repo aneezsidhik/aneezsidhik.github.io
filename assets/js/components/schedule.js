@@ -35,10 +35,10 @@ class ScheduleComponent {
       const firstJuma = utils.convertStringTimeToDateObject(todaysData.juma[0]).getTime();
       const secondJuma = utils.convertStringTimeToDateObject(todaysData.juma[1]).getTime();
       if(todaysJamaatTime < NOW.getTime() && NOW.getDay() == 4 && index == 1) {
-        row.querySelector('.schedule__time-name').textContent = "JUMMAH";
+        row.querySelector('.schedule__time-name').textContent = "JUM'A";
         row.querySelector('.schedule__time--right').textContent = utils.convertToTwelveHourTime(tomorrowsData.juma[0]);
       } else if(NOW.getTime() <= secondJuma && NOW.getDay() == 5 && index == 1) {
-        row.querySelector('.schedule__time-name').textContent = "JUMMAH";
+        row.querySelector('.schedule__time-name').textContent = "JUM'A";
         let jamaatTime = utils.convertToTwelveHourTime(todaysData.juma[0]);
         todaysData.schedule[index][1] = todaysData.juma[0];
         if(NOW.getTime() > firstJuma) {
@@ -105,7 +105,7 @@ class ScheduleComponent {
     for (let index = 0; index < this.azanTimes.length; index++) {
       const TIME = utils.convertStringTimeToDateObject(this.azanTimes[index]);
       const DIFF = TIME.getTime() - NOW.getTime();
-      this.determineNextPrayerTime(DIFF,`${this.prayerNames[index]} IN:`);
+      this.determineNextPrayerTime(DIFF,`${this.prayerNames[index]} START IN:`);
       if (DIFF > 0  && DIFF <= 1000) {
         window.dispatchEvent(new Event('alarm-on'));
         break;

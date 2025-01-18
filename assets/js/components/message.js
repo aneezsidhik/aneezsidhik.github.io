@@ -4,7 +4,7 @@ class MessageComponent {
     this.main = main;
     this.currentMessageIndex = 0;
     this.twoTabs = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
-    this.jumaTimes = 'FRIDAY KHUTBA: '.concat(utils.convertToTwelveHourTime(App.todaysData.juma[0]), ' & ', utils.convertToTwelveHourTime(App.todaysData.juma[1]));
+    this.jumaTimes = 'JUM'A KHUTBA TIMES: '.concat(utils.convertToTwelveHourTime(App.todaysData.juma[0]), ' & ', utils.convertToTwelveHourTime(App.todaysData.juma[1]));
     this.messages = 'PLEASE OBSERVE SILENCE IN THE MASJID'.concat(this.twoTabs,this.jumaTimes);
 
     if (App.todaysData.message) {
