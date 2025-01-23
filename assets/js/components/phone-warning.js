@@ -21,6 +21,8 @@ class PhoneWarningComponent {
 
   updateCountdown(e) {
     this.containerElement.classList.add(this.isExpandedClass);
-    this.countdownElement.textContent = Math.ceil(e.detail / 1000);
+    let secondsRemaining = Math.ceil(e.detail / 1000);
+    this.containerElement.style['background-size'] = `100% ${100 - (secondsRemaining/60)*100}%`;
+    this.countdownElement.textContent = secondsRemaining;
   }
 }
