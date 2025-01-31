@@ -8,9 +8,6 @@ App.content = [
     {
         "image": "seerah_isha.jpg"
     },
-    {
-        "image": "isha_weekend.jpg"
-    },
 /*    {
         "image": "page_2.jpg",
         "fromDate": "2022-03-19 01:36:00",
