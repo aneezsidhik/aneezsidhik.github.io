@@ -8,6 +8,10 @@ App.content = [
     {
         "image": "seerah_isha.jpg"
     },
+    {
+        "image": "ramadan_talk.jpg",
+        "toDate": "2024-02-14 20:00:00"
+    },
 /*    {
         "image": "page_2.jpg",
         "fromDate": "2022-03-19 01:36:00",
