@@ -1,8 +1,5 @@
 App.content = [
     {
-        "image": "ramadan_talk.jpg"
-    },
-    {
         "image": "juma_winter.jpg"
     },
     {
