@@ -7,10 +7,10 @@ App.content = [
         "image": "juma_winter.jpg"
     },
     {
-        "image": "tafseer_isha.jpg"
+        "image": "tafseer_asr.jpg"
     },
     {
-        "image": "seerah_isha.jpg"
+        "image": "seerah_asr.jpg"
     }
 /*    {
         "image": "page_2.jpg",
