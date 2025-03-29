@@ -1,23 +1,10 @@
 App.content = [
     {
-        "image": "qiyam_new.jpg",
-        "toDate": "2025-03-30 00:00:00"
-    },
-    {
         "image": "eid.jpg",
         "toDate": "2025-03-31 00:00:00"
     },
     {
-        "image": "juma_winter.jpg",
-        "toDate": "2025-03-30 00:00:00"
-    },
-    {
-        "image": "tafseer_asr.jpg",
-        "toDate": "2025-03-30 00:00:00"
-    },
-    {
-        "image": "seerah_asr.jpg",
-        "toDate": "2025-03-30 00:00:00"
+        "image": "juma_summer.jpg"
     }
 /*    {
         "image": "page_2.jpg",
