@@ -14,6 +14,5 @@ class ProhibitedComponent {
     const zawal = utils.convertStringTimeToDateObject(App.todaysData.schedule[1][0]);
     zawal.setMinutes(zawal.getMinutes()-10);
     this.containerElement.querySelector('.prohibited__zawaal').textContent = `${utils.pad(zawal.getHours())}:${utils.pad(zawal.getMinutes())}`;
-    this.containerElement.querySelector('.prohibited__qiyam').textContent = utils.convertToTwelveHourTime("02:15");;
   }
 }

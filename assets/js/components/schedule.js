@@ -67,10 +67,6 @@ class ScheduleComponent {
     this.azanTimes.push(document.querySelector('.prohibited__zawaal').textContent);
     this.prayerTimes.push('');
     this.prayerNames.push('ZAWAAL');
-
-    this.azanTimes.push(document.querySelector('.prohibited__qiyam').textContent);
-    this.prayerTimes.push('');
-    this.prayerNames.push('QIYAM');
   }
 
   updateCurrentAzanAndPrayerTime() {
