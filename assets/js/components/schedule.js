@@ -70,7 +70,7 @@ class ScheduleComponent {
 
     this.azanTimes.push(document.querySelector('.prohibited__qiyam').textContent);
     this.prayerTimes.push('');
-    this.prayerNames.push('Q-LAYL');
+    this.prayerNames.push('QIYAM');
   }
 
   updateCurrentAzanAndPrayerTime() {
