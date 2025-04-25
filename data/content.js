@@ -1,5 +1,9 @@
 App.content = [
     {
+        "image": "event_days.jpg",
+        "toDate": "2025-05-31 00:00:00"
+    },
+    {
         "image": "juma_summer.jpg"
     },
     {
