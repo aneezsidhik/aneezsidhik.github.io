@@ -2,7 +2,7 @@ App.content = [
     {
         "image": "eid.jpg",
         "toDate": "2025-06-06 09:59:00"
-    }
+    },
     {
         "image": "juma_summer.jpg"
     },
