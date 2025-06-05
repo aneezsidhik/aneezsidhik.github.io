@@ -4,6 +4,10 @@ App.content = [
         "toDate": "2025-06-06 09:59:00"
     },
     {
+        "image": "fun_day.jpg",
+        "toDate": "2025-06-08 19:30:00"
+    },
+    {
         "image": "juma_summer.jpg"
     },
     {
