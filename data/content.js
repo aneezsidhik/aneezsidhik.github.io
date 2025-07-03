@@ -1,7 +1,7 @@
 App.content = [
     {
         "image": "event_days.jpg",
-        "toDate": "2025-06-28 23:59:00"
+        "toDate": "2025-07-30 23:59:00"
     },
     {
         "image": "juma_summer.jpg"
