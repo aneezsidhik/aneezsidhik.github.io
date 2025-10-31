@@ -6,7 +6,7 @@ App.content = [
     {
         "image": "juma_winter.jpg",
         "fromDate": "2025-10-24 14:16:00"
-    }
+    },
     {
         "image": "seerah_isha.jpg"
     },
