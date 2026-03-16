@@ -12,6 +12,14 @@ App.content = [
     },
     {
         "image": "tafseer_isha.jpg"
+    },
+    {
+            "image": "eid.jpg",
+            "toDate": "2026-03-20 10:30:00"
+    },
+    {
+         "image": "fitrana.jpg",
+         "toDate": "2026-03-20 10:30:00"
     }
 /*    {
         "image": "page_2.jpg",
