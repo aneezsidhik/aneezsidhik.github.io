@@ -1,6 +1,11 @@
 App.content = [
     {
         "image": "juma_summer.jpg",
+        "fromDate": "2026-03-27 13:46:00"
+    },
+    {
+        "image": "juma_ramadan.jpg",
+        "toDate": "2026-03-27 13:45:00"
     },
     {
         "image": "seerah_isha.jpg"
