@@ -4,26 +4,14 @@ App.content = [
         "fromDate": "2026-03-27 13:46:00"
     },
     {
-        "image": "juma_ramadan.jpg",
-        "toDate": "2026-03-27 13:45:00"
+        "image": "event_days.jpg",
+        "toDate": "2026-05-31 23:59:00"
     },
     {
-        "image": "youth_event.jpg",
-        "toDate": "2026-03-28 22:00:00"
+        "image": "seerah_maghrib.jpg"
     },
     {
-        "image": "seerah_isha.jpg"
-    },
-    {
-        "image": "tafseer_isha.jpg"
-    },
-    {
-            "image": "eid.jpg",
-            "toDate": "2026-03-20 10:30:00"
-    },
-    {
-         "image": "fitrana.jpg",
-         "toDate": "2026-03-20 10:30:00"
+        "image": "tafseer_maghrib.jpg"
     }
 /*    {
         "image": "page_2.jpg",
