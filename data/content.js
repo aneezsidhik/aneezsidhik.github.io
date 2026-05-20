@@ -12,6 +12,14 @@ App.content = [
     },
     {
         "image": "tafseer_maghrib.jpg"
+    },
+    {
+        "image": "eid.jpg",
+        "toDate": "2026-05-27 10:30:00"
+    },
+    {
+        "image": "family_fun.jpg",
+        "toDate": "2026-06-07 19:30:00"
     }
 /*    {
         "image": "page_2.jpg",
