@@ -12,7 +12,7 @@ App.content = [
     },
     {
         "image": "tafseer_maghrib.jpg"
-    }
+    },
     {
         "image": "family_fun.jpg",
         "toDate": "2026-06-07 19:30:00"
