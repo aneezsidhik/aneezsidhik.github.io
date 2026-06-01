@@ -5,18 +5,14 @@ App.content = [
     },
     {
         "image": "event_days.jpg",
-        "toDate": "2026-05-31 23:59:00"
+        "toDate": "2026-06-29 23:59:00"
     },
     {
         "image": "seerah_maghrib.jpg"
     },
     {
         "image": "tafseer_maghrib.jpg"
-    },
-    {
-        "image": "eid.jpg",
-        "toDate": "2026-05-27 10:30:00"
-    },
+    }
     {
         "image": "family_fun.jpg",
         "toDate": "2026-06-07 19:30:00"
