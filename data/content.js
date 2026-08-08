@@ -4,8 +4,8 @@ App.content = [
         "fromDate": "2026-03-27 13:46:00"
     },
     {
-        "image": "july_events.jpeg",
-        "toDate": "2026-07-31 23:59:00"
+        "image": "august_events.jpeg",
+        "toDate": "2026-08-31 23:59:00"
     },
     {
         "image": "seerah_maghrib.jpg"
