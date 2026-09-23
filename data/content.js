@@ -8,10 +8,10 @@ App.content = [
         "toDate": "2026-10-18 23:59:00"
     },
     {
-        "image": "seerah_maghrib.jpg"
+        "image": "seerah_isha.jpg"
     },
     {
-        "image": "tafseer_maghrib.jpg"
+        "image": "tafseer_isha.jpg"
     }
 /*    {
         "image": "page_2.jpg",
