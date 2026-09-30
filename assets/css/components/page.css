@@ -1,19 +1,27 @@
+.flyer,
+.page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  width: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
 .flyer {
-  height: 100%;
-  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   background-color: black;
-  display: none;
-}
-
-.page {
- display: none;
 }
 
 .show {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 .sayingInEnglish,
