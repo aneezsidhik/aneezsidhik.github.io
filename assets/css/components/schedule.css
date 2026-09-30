@@ -2,6 +2,7 @@
   width: 100%;
   height: 65vh;
   border-bottom: 1px solid #fff;
+  table-layout: fixed;
 }
 
 .schedule__heading {
@@ -26,13 +27,13 @@
 .schedule__time--left {
   color: #f00;
   /* for new font */
-  font-size: 8vh;
+  font-size: min(8vh, 13vw);
 }
 
 .schedule__time--right {
   color: #0f0;
   /* for new font */
-  font-size: 8vh;
+  font-size: min(8vh, 13vw);
 
 }
 
