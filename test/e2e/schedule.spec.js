@@ -1,5 +1,6 @@
 const { test, expect } = require('@playwright/test');
-const { at, openApp, advance } = require('../helpers/app');
+const { at, openApp, advance, alarmPlays } = require('../helpers/app');
+const fixtures = require('../fixtures/data');
 
 /** Reads the timetable as [[name, start, jamaat], ...]. */
 async function readRows(page) {
@@ -91,8 +92,8 @@ test.describe("Jum'a", () => {
   test("on Friday between the two Jum'as the row shows the second Jum'a", async ({ page }) => {
     await openApp(page, { now: at('2026-01-16 12:50:00') });
 
-    // Start time is already tomorrow's (Saturday) because Dhuhr jama'at has passed
-    expect((await readRows(page))[1]).toEqual(["JUM'A", '12:18', '01:20']);
+    // Start time stays today's: the second Jum'a (not the normal Dhuhr jama'at) is what counts
+    expect((await readRows(page))[1]).toEqual(["JUM'A", '12:17', '01:20']);
   });
 
   test("on Friday after the second Jum'a the row goes back to Dhuhr", async ({ page }) => {
@@ -105,6 +106,15 @@ test.describe("Jum'a", () => {
     await openApp(page, { now: at('2026-01-15 13:00:00') });
 
     expect((await readRows(page))[1]).toEqual(["JUM'A", '12:17', '12:35']);
+  });
+
+  test("showing Jum'a does not change the timetable data for later refreshes", async ({ page }) => {
+    await openApp(page, { now: at('2026-01-16 10:00:00') });
+
+    // Rows are rebuilt after every flyer; jama'at must be derived again, not mutated.
+    await advance(page, 60_000);
+    expect((await readRows(page))[1]).toEqual(["JUM'A", '12:17', '12:35']);
+    expect(await page.evaluate(() => App.todaysData.schedule[1][1])).toBe('12:47');
   });
 
   test('on Thursday before Dhuhr jamaat the row still shows Dhuhr', async ({ page }) => {
@@ -121,5 +131,55 @@ test.describe('prohibited times footer', () => {
     await expect(page.locator('.prohibited__sunrise')).toHaveText('07:50');
     await expect(page.locator('.prohibited__ishraq')).toHaveText('08:05');
     await expect(page.locator('.prohibited__zawaal')).toHaveText('12:05');
+  });
+
+  test('Ishraq and Zawaal alerts work straight after load (not only after the first flyer)', async ({ page }) => {
+    // Ishraq 08:05
+    await openApp(page, { now: at('2026-01-14 08:04:50') });
+    await advance(page, 20_000);
+
+    expect(await alarmPlays(page)).toHaveLength(1);
+  });
+
+  test('counts down to Ishraq and Zawaal', async ({ page }) => {
+    await openApp(page, { now: at('2026-01-14 11:30:00') });
+    await advance(page, 20_000);
+
+    // 11:30:20 -> Zawaal 12:05 is 34m40s away
+    await expect(page.locator('.next__prayer__name')).toHaveText('ZAWAAL START IN:');
+    await expect(page.locator('.next__prayer__time')).toHaveText('00:34');
+  });
+});
+
+test.describe("masjid closed", () => {
+  test("gives no phone warning, highlight or alarm at jama'at", async ({ page }) => {
+    await openApp(page, { now: at('2026-01-14 14:49:30'), masjidClosed: true });
+
+    await advance(page, 40_000); // 14:50:10
+    await expect(page.locator('.phone-warning')).not.toHaveClass(/phone-warning--is-expanded/);
+    await expect(page.locator('.schedule__row--highlighted')).toHaveCount(0);
+    expect(await alarmPlays(page)).toHaveLength(0);
+  });
+
+  test('gives no alarm at a start time either', async ({ page }) => {
+    await openApp(page, { now: at('2026-01-14 14:29:50'), masjidClosed: true });
+    await advance(page, 20_000);
+
+    expect(await alarmPlays(page)).toHaveLength(0);
+  });
+});
+
+test.describe('highlighted rows', () => {
+  test('clears every highlighted row once it is out of range', async ({ page }) => {
+    // Maghrib jama'at 16:25 and Isha jama'at 16:50 are both within 30 minutes of 16:40
+    const data = structuredClone(fixtures.data);
+    data['14-01'].schedule[4] = ['16:30', '16:50'];
+    await openApp(page, { now: at('2026-01-14 16:40:00'), data });
+    await advance(page, 1_000);
+    await expect(page.locator('.schedule__row--highlighted')).toHaveCount(2);
+
+    await advance(page, 16 * 60_000); // 16:56 -> Maghrib is 31 minutes behind
+    await expect(page.locator('.schedule__row--highlighted')).toHaveCount(1);
+    await expect(page.locator('.schedule__row--highlighted .schedule__time-name')).toHaveText('ISHA');
   });
 });

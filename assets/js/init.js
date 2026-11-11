@@ -1,1 +1,1 @@
-App = {};
+window.App = {};

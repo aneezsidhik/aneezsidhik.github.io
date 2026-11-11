@@ -36,7 +36,8 @@
  font-size: 3.5vh;
 }
 
-.show {
+.date-time__gregorian-date.show,
+.remaining_time.show {
  display: block;
 }
 

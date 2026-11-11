@@ -32,20 +32,14 @@ class DateTimeComponent {
     this.secondsElement.textContent = `:${utils.pad(NOW.getSeconds())}`;
     this.dates = [];
     this.dates.push(`${this.daysOfWeekShort[NOW.getDay()]} ${utils.pad(NOW.getDate())} ${this.monthsShort[NOW.getMonth()]} ${NOW.getFullYear()}`);
-    if(NOW > utils.convertStringTimeToDateObject(App.todaysData.schedule[3][0])) {
-        App.todaysData.hijriDate = App.tomorrowsData.hijriDate;
+    // The Hijri day changes when Maghrib starts.
+    let hijriDate = App.todaysData.hijriDate;
+    if(NOW > utils.convertStringTimeToDateObject(App.todaysData.schedule[3][0]) && App.tomorrowsData.hijriDate) {
+        hijriDate = App.tomorrowsData.hijriDate;
     }
-//    NOW.setDate(NOW.getDate() - 1)
-//    App.todaysData.hijriDate = new Intl.DateTimeFormat('en-GB-u-ca-islamic-civil', { dateStyle: 'medium'}).format(NOW);
-//    App.todaysData.hijriDate = new Intl.DateTimeFormat('en-GB-u-ca-islamic-rgsa', { dateStyle: 'medium'}).format(NOW);
-    if(NOW > utils.convertStringTimeToDateObject(App.todaysData.schedule[3][0])) {
-        const TOMORROW = new Date(NOW)
-        TOMORROW.setDate(TOMORROW.getDate() + 1)
-//        App.todaysData.hijriDate = new Intl.DateTimeFormat('en-GB-u-ca-islamic-civil', { dateStyle: 'medium'}).format(TOMORROW);
-//        App.todaysData.hijriDate = new Intl.DateTimeFormat('en-GB-u-ca-islamic-rgsa', { dateStyle: 'medium'}).format(TOMORROW);
-
+    if (hijriDate) {
+        this.dates.push(hijriDate.toUpperCase());
     }
-    this.dates.push(App.todaysData.hijriDate.toUpperCase());
   }
 
   populate() {
@@ -56,6 +50,7 @@ class DateTimeComponent {
             this.nextPrayerTime.textContent = App.nextPrayerTime;
             this.nextPrayerName.textContent = App.nextPrayerName;
         }
+        // Start over even without a countdown, otherwise the dates never show again.
         this.currentDateIndex = 0;
     } else {
         document.querySelector('.remaining_time').classList.remove('show');

@@ -19,9 +19,17 @@
   background-color: black;
 }
 
-.show {
+.flyer.show,
+.page.show {
   opacity: 1;
   visibility: visible;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flyer,
+  .page {
+    transition: none;
+  }
 }
 
 .sayingInEnglish,

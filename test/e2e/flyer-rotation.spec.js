@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const { at, openApp, advance, alarmPlays } = require('../helpers/app');
+const { at, openApp, advance, alarmPlays, blockReload } = require('../helpers/app');
 
 const SHOWN = /\bshow\b/;
 
@@ -63,6 +63,33 @@ test.describe('flyer rotation', () => {
     await advance(page, 20_000);
     await expectFlyer(page);
     expect(await flyerImage(page)).toContain('later.jpg');
+  });
+
+  test('a flyer starting at a later hour joins the rotation without a reload', async ({ page }) => {
+    const content = [
+      { image: 'now.jpg' },
+      { image: 'later.jpg', fromDate: '2026-01-14 11:00:00' },
+    ];
+    await openApp(page, { now: at('2026-01-14 10:59:50'), content });
+    await blockReload(page);
+    await page.evaluate(() => { window.__beforeReload = true; });
+
+    await advance(page, 20_000); // 11:00:10 -> first flyer
+    expect(await flyerImage(page)).toContain('now.jpg');
+    await advance(page, 25_000);
+    expect(await flyerImage(page)).toContain('later.jpg');
+    expect(await page.evaluate(() => window.__beforeReload)).toBe(true);
+  });
+
+  test('the timetable gets its full time again after an alarm interrupts a flyer', async ({ page }) => {
+    await openApp(page, { now: at('2026-01-14 14:29:35') });
+
+    await advance(page, 24_000); // 14:29:59 -> alarm brings the timetable back
+    await expectTimetable(page);
+    await advance(page, 18_000); // 14:30:17, less than 20s later
+    await expectTimetable(page);
+    await advance(page, 4_000); // 14:30:21
+    await expectFlyer(page);
   });
 
   test('never rotates when there are no active flyers', async ({ page }) => {

@@ -20,6 +20,17 @@
   color: #f00;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    white-space: normal;
+  }
+
+  .marquee span {
+    padding-left: 0;
+    animation: none;
+  }
+}
+
 .marquee span:hover {
   animation-play-state: paused
 }

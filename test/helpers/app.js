@@ -48,4 +48,14 @@ async function alarmPlays(page) {
   return page.evaluate(() => window.__alarmPlays);
 }
 
-module.exports = { at, openApp, advance, alarmPlays };
+/**
+ * Makes the hourly "is the server up?" check fail, so the page can't reload itself
+ * (as when the network is down). Everything must keep working in place.
+ */
+async function blockReload(page) {
+  await page.route('**/index.html', (route) => (
+    route.request().method() === 'HEAD' ? route.abort() : route.continue()
+  ));
+}
+
+module.exports = { at, openApp, advance, alarmPlays, blockReload };

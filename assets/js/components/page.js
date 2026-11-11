@@ -5,27 +5,20 @@ class TabRotateComponent {
     this.sayingInArabicElement = document.querySelector('.sayingInArabic');
     this.sayingInEnglishElement = document.querySelector('.sayingInEnglish');
     this.referenceElement = document.querySelector('.reference');
-    this.pages = [this.timetableElement];
 
     this.enabledElement = this.timetableElement;
     this.timetableElement.classList.add('show');
-    this.pageIndex = 1;
     this.contentIndex = 0;
     this.phoneWarningOn = false;
     this.slideStartTime = new Date();
     this.bindEvents();
     this.content = [];
     this.filterFlyers();
-    if(this.content.length >= 1) {
-      this.pages.push(this.flyerElement);
-    }
 
-    this.populateTimetableElement();
-
-    if (this.content.length >= 1) {
-        window.addEventListener('second-change', this.populateTimetableElement.bind(this));
-        window.addEventListener('second-change', this.populateFlyer.bind(this));
-    }
+    window.addEventListener('second-change', this.populateTimetableElement.bind(this));
+    window.addEventListener('second-change', this.populateFlyer.bind(this));
+    // Flyers have from/to dates, so re-check them as time passes.
+    window.addEventListener('hour-change', this.filterFlyers.bind(this));
   }
 
   bindEvents() {
@@ -48,11 +41,12 @@ class TabRotateComponent {
           this.enabledElement.classList.remove('show');
           this.enabledElement = this.timetableElement;
           this.enabledElement.classList.add('show');
-          this.pageIndex = 1;
+          this.slideStartTime = new Date();
       }
   }
 
   filterFlyers() {
+    this.content = [];
     for (let index = 0; index < App.content.length; index++) {
         const NOW = new Date();
         let enabled = true;
@@ -68,6 +62,9 @@ class TabRotateComponent {
             this.content.push(App.content[index])
         }
     }
+    if (this.contentIndex >= this.content.length) {
+        this.contentIndex = 0;
+    }
   }
 
   populateTimetableElement() {
@@ -80,21 +77,12 @@ class TabRotateComponent {
         this.enabledElement = this.timetableElement;
         this.enabledElement.classList.add('show');
 
-        if(this.pageIndex == 1) {
-            App.main.loadTodaysData();
-        }
-
-        if (this.pageIndex >= this.pages.length) {
-            this.pageIndex = 0;
-        }
-        if (this.contentIndex >= this.content.length) {
-            this.contentIndex = 0;
-        }
+        App.main.loadTodaysData();
     }
   }
 
   populateFlyer() {
-    if(this.phoneWarningOn) {
+    if(this.phoneWarningOn || this.content.length == 0) {
         return;
     }
 
@@ -112,7 +100,7 @@ class TabRotateComponent {
             if(content.image) {
                 this.flyerElement.style.backgroundImage = `url(assets/images/${content.image})`;
             } else {
-                this.flyerElement.style = `none`;
+                this.flyerElement.style.removeProperty('background-image');
             }
             this.sayingInArabicElement.textContent = content.sayingInArabic;
             this.sayingInEnglishElement.textContent = content.sayingInEnglish;
@@ -124,9 +112,6 @@ class TabRotateComponent {
             }
         }
 
-        if (this.pageIndex >= this.pages.length) {
-            this.pageIndex = 0;
-        }
         if (this.contentIndex >= this.content.length) {
             this.contentIndex = 0;
         }

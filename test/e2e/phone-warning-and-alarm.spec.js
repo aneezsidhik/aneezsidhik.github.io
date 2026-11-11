@@ -1,5 +1,6 @@
 const { test, expect } = require('@playwright/test');
 const { at, openApp, advance, alarmPlays } = require('../helpers/app');
+const fixtures = require('../fixtures/data');
 
 const EXPANDED = /phone-warning--is-expanded/;
 
@@ -44,6 +45,20 @@ test.describe('phone warning', () => {
     await expect(warning).toBeHidden();
   });
 
+  test("tells the other components once, not every second, when jama'at passes", async ({ page }) => {
+    await openApp(page, { now: at('2026-01-14 14:48:50') });
+    await page.evaluate(() => {
+      window.__events = { off: 0, enable: 0, disable: 0 };
+      window.addEventListener('phone-warning-off', () => window.__events.off++);
+      window.addEventListener('enable-tab-rotate', () => window.__events.enable++);
+      window.addEventListener('disable-tab-rotate', () => window.__events.disable++);
+    });
+
+    await advance(page, 120_000); // 14:50:50, well past jama'at but still highlighted
+
+    expect(await page.evaluate(() => window.__events)).toEqual({ off: 1, enable: 1, disable: 1 });
+  });
+
   test('does not appear for a start time (only for jamaat)', async ({ page }) => {
     // Asr starts 14:30, jama'at is 14:50
     await openApp(page, { now: at('2026-01-14 14:29:00') });
@@ -67,6 +82,24 @@ test.describe('alarm', () => {
     await openApp(page, { now: at('2026-01-14 14:49:50') });
     await advance(page, 20_000);
 
+    expect(await alarmPlays(page)).toHaveLength(1);
+  });
+
+  test("plays only once when the start time and jama'at are the same (Maghrib)", async ({ page }) => {
+    const data = structuredClone(fixtures.data);
+    data['14-01'].schedule[3] = ['16:20', '16:20'];
+    await openApp(page, { now: at('2026-01-14 16:19:50'), data });
+    await advance(page, 20_000);
+
+    expect(await alarmPlays(page)).toHaveLength(1);
+  });
+
+  test('is not skipped when a timer fires late', async ({ page }) => {
+    await openApp(page, { now: at('2026-01-14 14:29:57') });
+
+    await page.clock.fastForward(1_900); // 14:29:58.9, tick: Asr is 1.1s away
+    expect(await alarmPlays(page)).toHaveLength(0);
+    await page.clock.fastForward(1_400); // 14:30:00.3, tick arrives after Asr started
     expect(await alarmPlays(page)).toHaveLength(1);
   });
 

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Timer</title>
-    <link rel="shortcut icon" href="#" />
+    <title>Wembley Central Masjid</title>
+    <link rel="icon" href="data:," />
     <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/components/index.css"/>
 </head>
@@ -21,7 +21,7 @@
         </span>
             <div class="date-time__date">
                 <p class="date-time__gregorian-date"></p>
-                <p class="message remaining_time">
+                <p class="message remaining_time" aria-live="polite">
                     <span class="next__prayer__name">&nbsp;</span>
                     <span class="next__prayer__time digital">&nbsp;</span>
                 </p>
@@ -35,15 +35,15 @@
             <p class="phone-warning__countdown digital"></p>
             <iframe src="assets/audio/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
             <audio class="reminder">
-                <source src="assets/audio/alarm_clock.mp3" type="audio/mp3">
+                <source src="assets/audio/alarm_clock.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>
         <table class="schedule">
             <tr>
-                <th class="schedule__heading left">SALAH</th>
-                <th class="schedule__heading">START</th>
-                <th class="schedule__heading">JAMA'AT</th>
+                <th scope="col" class="schedule__heading left">SALAH</th>
+                <th scope="col" class="schedule__heading">START</th>
+                <th scope="col" class="schedule__heading">JAMA'AT</th>
             </tr>
             <tr class="schedule__row">
                 <td class="schedule__time-name left">FAJR</td>
@@ -107,7 +107,6 @@
     </table>
 </div>
 
-<script type="text/javascript" src="assets/js/mock-date.js"></script>
 <script type="text/javascript" src="assets/js/init.js"></script>
 <script type="text/javascript" src="data/data.js"></script>
 <script type="text/javascript" src="data/content.js"></script>
