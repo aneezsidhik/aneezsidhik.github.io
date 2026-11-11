@@ -8,6 +8,8 @@ module.exports = defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
+  // Screenshot baselines are macOS-rendered; skip pixel comparisons on Linux CI.
+  ignoreSnapshots: !!process.env.CI,
   reporter: [['list'], ['html', { open: 'never' }]],
   expect: {
     toHaveScreenshot: { maxDiffPixelRatio: 0.01, animations: 'disabled' },
